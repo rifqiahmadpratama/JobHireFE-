@@ -1,0 +1,15 @@
+.backdroplogin {
+  height: 94vh;
+  width: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  /* background-position: top; */
+
+  background-image: linear-gradient(
+      to bottom,
+      rgb(94, 80, 161, 0.8),
+      rgba(94, 80, 161, 0.8)
+    ),
+    url("../assets/images/background_login.png");
+}
