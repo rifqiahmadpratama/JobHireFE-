@@ -9,7 +9,7 @@ import Image from "next/image";
 import ImageProfile from "../../assets/images/profile.png";
 import ImageEmail from "../../assets/images/icons/email.svg";
 import style from "../../styles/Profile.module.css";
-const Profile = () => {
+const Hire = () => {
   //   const router = useRouter();
   //   const [product, setProduct] = useState();
   //   useEffect(() => {
@@ -191,4 +191,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Hire;

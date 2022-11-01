@@ -121,6 +121,16 @@
 .profiledetail p {
   margin-bottom: 5px !important;
 }
+
+.profiledetailbutton {
+  display: flex;
+  padding-left: 150px;
+  flex-direction: column;
+  justify-content: center;
+}
+.profiledetailbutton p {
+  margin-bottom: 5px !important;
+}
 .skills {
   margin-top: 10px;
   display: flex;

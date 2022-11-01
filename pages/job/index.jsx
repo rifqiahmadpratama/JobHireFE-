@@ -13,16 +13,27 @@ import Link from "next/link";
 import { Button } from "react-bootstrap";
 import nookies from "nookies";
 
-export async function getstaticprops() {
-  const res = await axios.get(`http://localhost:3005/users?_limit=5`);
+export async function getServerSideProps(ctx) {
+  const DataCookies = nookies.get(ctx);
+  const id = DataCookies.id;
+  const token = DataCookies.token;
+  const res = await axios.get(`http://localhost:3200/users`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Access-Control-Allow-Origin": "*",
+      // "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE",
+    },
+  });
   return {
-    props: { data: res.data },
+    props: { data: res.data.data },
   };
 }
 
 const Detail = ({ data }) => {
+  console.log("data SSR = ", data);
   const router = useRouter();
   const [search, setSearch] = useState("");
+  const [DataProfile, setDataProfile] = useState();
   const [dataSearch, setDataSearch] = useState([]);
   const [sort, setSort] = useState("desc");
   const [sortBy, setSortBy] = useState("name");
@@ -31,19 +42,17 @@ const Detail = ({ data }) => {
     e.preventDefault();
     fetch();
   };
+
+  localStorage.clear();
+  if (DataProfile) {
+    localStorage.setItem("id", DataProfile);
+  }
   console.log(search);
   const fetch = async () => {
-    const result = await axios.get(
-      `http://localhost:3005/users?q=${search}&_sort=${sortBy}&_order=${sort},desc&_limit=5&_page=${page}`
-    );
+    const result = await axios.get(`http://localhost:3200/users`);
     setDataSearch(result.data);
-    // dataSearch.map(item =>{
-    console.log(dataSearch);
-
-    // console.log(item)
-    // })
+    console.log("cek data = ", dataSearch);
   };
-  // console.log(page + 1)
   const increment = () => {
     if (page == 2) {
       return;
@@ -156,7 +165,7 @@ const Detail = ({ data }) => {
             </div>
             <div className={style.main}>
               {search ? (
-                dataSearch?.map((item, index) => {
+                data?.map((item, index) => {
                   // if (item.skill === ""){
                   return (
                     <div className={style.card} key={index}>
@@ -179,10 +188,10 @@ const Detail = ({ data }) => {
                             {item.name}
                           </p>
                         </Link>
-                        <p className="text-muted">{item.job}</p>
+                        <p className="text-muted">{item.job_desk}</p>
                         <p className="text-muted">
                           <Image src={Maps} alt="location" />
-                          <span className="ml-2">{item.address}</span>
+                          <span className="ml-2">{item.domicili}</span>
                         </p>
                         <div className={style.skills}>
                           {item?.skill?.length > 0
@@ -202,7 +211,7 @@ const Detail = ({ data }) => {
                 })
               ) : (
                 <>
-                  {dataSearch?.map((data, index) => {
+                  {data?.map((data, index) => {
                     console.log(data.name);
                     // if (data?.skill) {
                     return (
@@ -226,10 +235,10 @@ const Detail = ({ data }) => {
                               {data.name}
                             </p>
                           </Link>
-                          <p className="text-muted">{data.job}</p>
+                          <p className="text-muted">{data.job_desk}</p>
                           <p className="text-muted">
                             <Image src={Maps} alt="location" />
-                            <span className="ml-2">{data.address}</span>
+                            <span className="ml-2">{data.domicili}</span>
                           </p>
                           <div className={style.skills}>
                             {data?.skill?.length > 0
@@ -242,6 +251,18 @@ const Detail = ({ data }) => {
                                 })
                               : ""}
                           </div>
+                        </div>
+                        <div className={style.profiledetailbutton}>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              router.push("/profile-friends"),
+                                setDataProfile(data.id);
+                            }}
+                            className="btn btn-primary text-light"
+                          >
+                            Lihat Profile
+                          </button>
                         </div>
                       </div>
                     );

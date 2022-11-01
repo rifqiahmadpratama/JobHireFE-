@@ -10,28 +10,30 @@ import styles from "../../styles/Profile.module.css";
 import Image from "next/image";
 import PhotoProfile from "../../assets/images/profile.png";
 import ImageEmail from "../../assets/images/icons/email.svg";
-
 import nookies from "nookies";
-
-export async function getServerSideProps(ctx) {
-  const DataCookies = nookies.get(ctx);
-  const token = DataCookies.token;
-
-  const res = await axios.get("http://localhost:3200/users/profile", {
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Access-Control-Allow-Origin": "*",
-      // "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE",
-    },
-  });
-  return {
-    props: { detail: res.data.data },
-  };
-}
-
-const Profile = ({ detail }) => {
+const Profile = () => {
   const router = useRouter();
+  const DataCookies = nookies.get();
+  const token = DataCookies.token;
+  const idProfile = localStorage.getItem("id");
+  const [saveData, setSaveData] = useState();
+  const fetch = async () => {
+    const result = await axios.get(
+      `http://localhost:3200/users/profile/friend/${idProfile}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
+          // "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE",
+        },
+      }
+    );
 
+    return setSaveData(result.data.data);
+  };
+  useEffect(() => {
+    fetch();
+  }, []);
   return (
     <div>
       <style global jsx>{``}</style>
@@ -57,35 +59,15 @@ const Profile = ({ detail }) => {
                       />
                     </div>
                   </Link>
-                  <h3>{detail?.name}</h3>
-                  <h5>{detail?.jobSkill}</h5>
-                  <p>{detail?.location}</p>
-                  <p>{detail?.job}</p>
-                  <p>{detail?.description}</p>
-                  <button
-                    className={`btn ${styles.btn_custom}`}
-                    onClick={() => router.push("/edit-profile")}
-                  >
-                    Edit Profile
-                  </button>
+                  <h3>{saveData?.name}</h3>
+                  <h5>{saveData?.jobSkill}</h5>
+                  <p>{saveData?.location}</p>
+                  <p>{saveData?.job}</p>
+                  <p>{saveData?.description}</p>
 
                   <p className="fw-1 fw-bold mt-5">Skill</p>
                   <div class="container text-center">
-                    <div class="row gy-2">
-                      {/* <div className={`border bg-warning ${styles.container_skill}`}> */}
-                      {/* {detail?.skill?.length > 0
-                        ? detail?.skill?.map((item) => (
-                            <div className="col-4">
-                              <div>
-                                <button className="btn bg-warning me-1 mt-2">
-                                  {item}
-                                </button>
-                              </div>
-                            </div>
-                          ))
-                        : "Loadingg"} */}
-                      {/* </div> */}
-                    </div>
+                    <div class="row gy-2"></div>
                   </div>
 
                   <ul className="d-flex flex-column mt-5">
