@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 export const postLogin = createAsyncThunk("Login/postLogin", async (data) => {
   try {
     const response = await axios.post(
-      "http://localhost:3200/users/login",
+      "https://jobhirebe-production.up.railway.app/users/login",
       JSON.stringify(data),
       {
         headers: {

@@ -52,7 +52,7 @@ const EditProfile = ({ detail }) => {
     await e.preventDefault();
 
     axios
-      .put("http://localhost:3200/users/profile", JSON.stringify(dataUser), {
+      .put("https://jobhirebe-production.up.railway.app/users/profile", JSON.stringify(dataUser), {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",

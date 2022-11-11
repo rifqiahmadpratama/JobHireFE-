@@ -49,7 +49,9 @@ const Detail = ({ data }) => {
   }
   console.log(search);
   const fetch = async () => {
-    const result = await axios.get(`http://localhost:3200/users`);
+    const result = await axios.get(
+      `http://jobhirebe-production.up.railway.app/users`
+    );
     setDataSearch(result.data);
     console.log("cek data = ", dataSearch);
   };
