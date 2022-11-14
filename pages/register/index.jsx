@@ -34,7 +34,7 @@ const Register = () => {
     if (dataUser.confirm_password.match(dataUser.password)) {
       await axios
         .post(
-          "http://localhost:3200/users/register",
+          process.env.REACT_APP_API_BACKEND + "users/register",
           JSON.stringify(dataUser),
           {
             headers: { "Content-Type": "application/json" },

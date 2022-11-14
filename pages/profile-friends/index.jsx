@@ -19,7 +19,7 @@ const Profile = () => {
   const [saveData, setSaveData] = useState();
   const fetch = async () => {
     const result = await axios.get(
-      `http://localhost:3200/users/profile/friend/${idProfile}`,
+      process.env.REACT_APP_API_BACKEND + `users/profile/friend/${idProfile}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

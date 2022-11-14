@@ -31,9 +31,13 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3200/users/login", JSON.stringify(data), {
-        headers: { "Content-Type": "application/json" },
-      })
+      .post(
+        process.env.REACT_APP_API_BACKEND + "users/login",
+        JSON.stringify(data),
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      )
       .then((res) => {
         if (res.data.statusCode === 201) {
           toast.success("Welcome, " + res.data.data.name, { autoClose: 2500 });

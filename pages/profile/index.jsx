@@ -17,13 +17,16 @@ export async function getServerSideProps(ctx) {
   const DataCookies = nookies.get(ctx);
   const token = DataCookies.token;
 
-  const res = await axios.get("http://localhost:3200/users/profile", {
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Access-Control-Allow-Origin": "*",
-      // "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE",
-    },
-  });
+  const res = await axios.get(
+    process.env.REACT_APP_API_BACKEND + "users/profile",
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Access-Control-Allow-Origin": "*",
+        // "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE",
+      },
+    }
+  );
   return {
     props: { detail: res.data.data },
   };

@@ -52,13 +52,17 @@ const EditProfile = ({ detail }) => {
     await e.preventDefault();
 
     axios
-      .put("https://jobhirebe-production.up.railway.app/users/profile", JSON.stringify(dataUser), {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "multipart/form-data",
-          "Content-Type": "application/json",
-        },
-      })
+      .put(
+        process.env.REACT_APP_API_BACKEND + "users/profile",
+        JSON.stringify(dataUser),
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "multipart/form-data",
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((res) => {
         console.log(res);
         alert("product update");
