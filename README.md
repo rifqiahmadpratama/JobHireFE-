@@ -102,8 +102,8 @@ Make sure that Node JS is installed on the computer.
 <p align="center" display=flex>
 <table>
   <tr>
-    <td><image src="https://user-images.githubusercontent.com/72550248/202631191-5a843fb6-949e-4d70-afcc-51cc0d441ef4.png" alt="Home Page sebelum login" width=100%></td>
-    <td><image src="https://user-images.githubusercontent.com/72550248/202631347-f42ddaf8-543f-451f-9721-ec935096d58a.png" alt="Login Page" width=100%/></td>
+    <td><image src="https://user-images.githubusercontent.com/72550248/202637446-92016b7d-068a-4f4b-87b8-70d975013e96.png" alt="Home Page" width=100%></td>
+    <td><image src="https://user-images.githubusercontent.com/72550248/202637347-94f6d8dd-be6a-4e33-93c1-a44c6a37835a.png" alt="Login Page" width=100%/></td>
   </tr>
    <tr>
     <td>Register Page</td>
@@ -111,8 +111,8 @@ Make sure that Node JS is installed on the computer.
   </tr>
   
   <tr>
-    <td><image src="https://user-images.githubusercontent.com/72550248/202631454-d054b021-f2f8-42cb-86a5-883839b61cc2.png" alt="My Bag Page" width=100% ></td>
-    <td><image src="https://user-images.githubusercontent.com/72550248/202631539-58574585-a353-4f79-90c1-7d59778ed375.png" alt="Modal Title Page" width=100%/></td>
+    <td><image src="https://user-images.githubusercontent.com/72550248/202637497-41ee12eb-0d64-4ad3-b094-9a9b1c8cd769.png" alt="Profile Page" width=100% ></td>
+    <td><image src="https://user-images.githubusercontent.com/72550248/202637551-cad107d1-4c9b-4fe3-8d15-74e00b296a54.png" alt="Edit Profile Page" width=100%/></td>
   </tr>
  
 </table>
