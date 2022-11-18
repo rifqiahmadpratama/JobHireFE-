@@ -3,7 +3,7 @@
 <!-- HEADER -->
 <div align="center">
   <a href="https://github.com/rifqiahmadpratama/JobHireFE">
-    <img src="https://user-images.githubusercontent.com/72550248/202631191-5a843fb6-949e-4d70-afcc-51cc0d441ef4.png" alt="Logo" width="200px">
+    <img src="https://user-images.githubusercontent.com/72550248/202637446-92016b7d-068a-4f4b-87b8-70d975013e96.png" alt="Logo" width="200px">
   </a>
   
   <h3 align="center">Job Hire Frontend with React.js</h3>
