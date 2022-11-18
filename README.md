@@ -1,34 +1,128 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div id="top"></div>
+
+<!-- HEADER -->
+<div align="center">
+  <a href="https://github.com/rifqiahmadpratama/react-intermediate">
+    <img src="https://user-images.githubusercontent.com/72550248/202631191-5a843fb6-949e-4d70-afcc-51cc0d441ef4.png" alt="Logo" width="200px">
+  </a>
+  
+  <h3 align="center">Toko Online Frontend with React.js</h3>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+
+## Table of Contents
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+       <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+       <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#related-project">Related Project</a></li>
+    <li><a href="#screenshoots">Screenshot</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#our-team">Our Team</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+Chat Online adalah aplikasi untuk membantu seseorang untuk melakukan komunikasi dengan lawan bicara dengan jarak jauh.
+
+### Built With
+
+This application was developed using a framework/library
+
+- [React Js](https://reactjs.org/)
+- [Javascript](https://www.javascript.com/)
+- [Axios](https://axios-http.com/)
+- [Redux](https://redux.js.org/)
+- [Bootstap](https://getbootstrap.com)
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Make sure that Node JS is installed on the computer.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Node.Js](https://nodejs.org/en/download/)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Installation
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+1. Get a free API Key at [https://github.com/rifqiahmadpratama/react-intermediate](https://github.com/rifqiahmadpratama/react-intermediate)
+2. Clone this repo (toko-Online-Frontend)
+   ```sh
+   git clone https://github.com/rifqiahmadpratama/react-intermediate.git
+   ```
+3. Go To Folder Repo
+   ```sh
+   cd Chat-Online-Frontend
+   ```
+4. Install NPM packages
+   ```sh
+   npm install
+   ```
+5. Enter your API in `.env`
+   ```js
+   REACT_API_BACKEND = "ENTER YOUR API";
+   ```
+6. Start website
+`sh npm start `
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<!-- Related Project -->
 
-## Learn More
+## Related Project
 
-To learn more about Next.js, take a look at the following resources:
+:rocket: [`Toko Online Backend`](https://github.com/rifqiahmadpratama/IntermediateBackEnd)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<!-- Screenshoots -->
 
-## Deploy on Vercel
+## Screenshoots
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<p align="center" display=flex>
+<table>
+  <tr>
+    <td><image src="https://user-images.githubusercontent.com/72550248/202631191-5a843fb6-949e-4d70-afcc-51cc0d441ef4.png" alt="Home Page sebelum login" width=100%></td>
+    <td><image src="https://user-images.githubusercontent.com/72550248/202631347-f42ddaf8-543f-451f-9721-ec935096d58a.png" alt="Login Page" width=100%/></td>
+  </tr>
+   <tr>
+    <td>Register Page</td>
+    <td>Login Page</td>
+  </tr>
+  
+  <tr>
+    <td><image src="https://user-images.githubusercontent.com/72550248/202631454-d054b021-f2f8-42cb-86a5-883839b61cc2.png" alt="My Bag Page" width=100% ></td>
+    <td><image src="https://user-images.githubusercontent.com/72550248/202631539-58574585-a353-4f79-90c1-7d59778ed375.png" alt="Modal Title Page" width=100%/></td>
+  </tr>
+ 
+</table>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## License
+
+Distributed under the [MIT](/LICENSE) License.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
