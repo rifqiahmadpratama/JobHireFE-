@@ -2,11 +2,11 @@
 
 <!-- HEADER -->
 <div align="center">
-  <a href="https://github.com/rifqiahmadpratama/react-intermediate">
+  <a href="https://github.com/rifqiahmadpratama/JobHireFE">
     <img src="https://user-images.githubusercontent.com/72550248/202631191-5a843fb6-949e-4d70-afcc-51cc0d441ef4.png" alt="Logo" width="200px">
   </a>
   
-  <h3 align="center">Toko Online Frontend with React.js</h3>
+  <h3 align="center">Job Hire Frontend with React.js</h3>
 </div>
 
 <!-- TABLE OF CONTENTS -->
