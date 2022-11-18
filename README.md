@@ -84,7 +84,7 @@ Make sure that Node JS is installed on the computer.
    REACT_API_BACKEND = "ENTER YOUR API";
    ```
 6. Start website
-`sh npm start `
+`sh npm run dev `
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- Related Project -->
