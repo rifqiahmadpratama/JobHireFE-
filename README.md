@@ -50,7 +50,7 @@ This application was developed using a framework/library
 - [React Js](https://reactjs.org/)
 - [Javascript](https://www.javascript.com/)
 - [Axios](https://axios-http.com/)
-- [Redux](https://redux.js.org/)
+- [Next Js](https://nextjs.org/)
 - [Bootstap](https://getbootstrap.com)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -66,14 +66,14 @@ Make sure that Node JS is installed on the computer.
 
 ### Installation
 
-1. Get a free API Key at [https://github.com/rifqiahmadpratama/react-intermediate](https://github.com/rifqiahmadpratama/react-intermediate)
+1. Get a free API Key at [https://github.com/rifqiahmadpratama/JobHireBE](https://github.com/rifqiahmadpratama/JobHireBE)
 2. Clone this repo (toko-Online-Frontend)
    ```sh
-   git clone https://github.com/rifqiahmadpratama/react-intermediate.git
+   git clone https://github.com/rifqiahmadpratama/JobHireFE.git
    ```
 3. Go To Folder Repo
    ```sh
-   cd Chat-Online-Frontend
+   cd Job-Hire-Frontend
    ```
 4. Install NPM packages
    ```sh
@@ -91,7 +91,7 @@ Make sure that Node JS is installed on the computer.
 
 ## Related Project
 
-:rocket: [`Toko Online Backend`](https://github.com/rifqiahmadpratama/IntermediateBackEnd)
+:rocket: [`Toko Online Backend`](https://github.com/rifqiahmadpratama/JobHireBE)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
